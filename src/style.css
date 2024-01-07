@@ -26,7 +26,15 @@ body {
 
 .main {
     /* flex-grow: 1; */
-    min-height: 55vh;
+    min-height: 60vh;
+}
+
+.navbar-scrolled {
+    position: fixed;
+    width: 100%;
+    transition: box-shadow 0.2s;
+    background-color: var(--primary-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .navbar img {
@@ -39,21 +47,22 @@ body {
 }
 
 .header-img {
-    width: 100%;
-    height: auto;
 }
 
 
 .main .content-about {
     color: var(--secondary-color);
-    min-height: 55vh;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; */
 }
 
 .main .content-about h1 {
     font-weight: 700;
+}
+
+.main .content-about p {
+    font-size: 1.2em;
 }
 
 .main .content-information {
@@ -91,6 +100,10 @@ body {
     color: var(--primary-color);
 }
 
+.footer a:hover {
+    text-decoration: underline;
+}
+
 
 @media screen and (max-width: 992px) {
 }
@@ -101,6 +114,10 @@ body {
 @media screen and (max-width: 575px) {
     .main .content-about h1 {
         font-size: 2em;
+    }
+
+    .main .content-about p {
+        font-size: 1em;
     }
 }
 
