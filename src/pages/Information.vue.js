@@ -16,15 +16,19 @@ const Information = {
               <h2>TENANTS</h2>
               <h2>INFORMATION</h2>
               <img src="./src/assets/ASSET-05.png" class="img-fluid img-maps-tenant" alt="maps-tenant">
-              </div>
+            </div>
             <div class="my-5">
               <img src="./src/assets/ASSET-06.png" class="img-fluid img-rundown-conference" alt="rundown-conference">
             </div>
           </div>
+            
           <div class="my-5">
-          <img src="./src/assets/ASSET-07.png" class="img-fluid img-maps-gate" alt="maps-gate">
-          <img src="./src/assets/ASSET-08.png" class="img-fluid img-rundown-festival" alt="rundown-festival">
-        </div>
+            <img src="./src/assets/ASSET-07.png" class="img-fluid img-maps-gate" alt="maps-gate">
+          </div>
+          <div class="my-5">
+            <img src="./src/assets/ASSET-08.png" class="img-fluid img-rundown-festival" alt="rundown-festival">
+          </div>
+
         </div>
     </div>
     `

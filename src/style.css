@@ -21,6 +21,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    min-width: 100vw;
 }
 
 .main {
@@ -74,18 +75,20 @@ body {
     justify-content: center;
 }
 
-.main .content-information .content-information-details img {
-    max-width: 70vw;
-}
-
 .footer {
     background-color: var(--secondary-color);
     color: var(--primary-color);
 }
 
 .footer img {
+    min-width: 100px;
     max-width: 200px;
     height: auto;
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--primary-color);
 }
 
 
