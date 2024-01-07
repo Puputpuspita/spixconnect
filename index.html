@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Using Bootstrap from CDN -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+
+        <link rel="stylesheet" href="src/style.css">
+
+        <!-- Using Vue js dan vue router from CDN -->
+        <script src="https://unpkg.com/vue@3"></script>
+        <script src="https://unpkg.com/vue-router@4"></script>
+        
+        <!-- Font awesome cdn -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <title>Spix</title>
+    </head>
+    <body>
+
+        <div id="app">
+
+            <!-- Navigation Bar -->
+            <nav class="navbar navbar-expand-sm py-4">
+                <div class="container d-flex justify-content-between">
+                  <!-- Brand/Logo -->
+                  <router-link to="/" class="navbar-brand"><img src="./src/assets/ASSET-02.png" alt="spix-logo"></router-link>
+                  
+                  <!-- Toggler/collapsible Button -->
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  
+                  <!-- Navbar items aligned to the right -->
+                  <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                      <li class="nav-item">
+                        <router-link to="/" class="nav-link" :class="{ 'active': $route.path === '/' }">HOME</router-link>
+                      </li>
+                      <li class="nav-item">
+                        <router-link to="/about" class="nav-link" :class="{ 'active': $route.path === '/about' }">ABOUT US</router-link>
+                      </li>
+                      <li class="nav-item">
+                        <router-link to="/information" class="nav-link" :class="{ 'active': $route.path === '/information' }">INFORMATION</router-link>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+             
+            <div class="main"> 
+                <router-view></router-view>
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer py-4">
+                <div class="container">
+                    <div class="row my-4">
+                        <div class="col-md-6">
+                            <router-link to="/" class="navbar-brand"><img src="./src/assets/ASSET-01.png" alt="spix-logo"></router-link>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fab fa-envelope"></i>
+                                <p class="mb-0 ms-3">spixconnect@gmail.com</p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="fab fa-instagram"></i>
+                                <p class="mb-0 ms-3">spixconnect</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+
+        <!-- Script vue js -->
+        <script src="./src/pages/Home.vue.js"></script> 
+        <script src="./src/pages/AboutUs.vue.js"></script> 
+        <script src="./src/pages/Information.vue.js"></script>
+
+        <script>
+
+            const routes = [
+                {
+                    path: '/',
+                    component: Home
+                }, {
+                    path: '/about',
+                    component: About
+                }, {
+                    path: '/information',
+                    component: Information
+                }
+            ]
+
+            const router = VueRouter.createRouter(
+                {history: VueRouter.createWebHashHistory(), routes}
+            )
+
+            const app = Vue.createApp({})
+            app.use(router)
+            app.mount('#app')
+        </script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+    </body>
+</html>

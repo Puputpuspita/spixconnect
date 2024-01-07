@@ -1,0 +1,108 @@
+@font-face {
+    font-family: 'Acumin Variable Concept';
+    src: url('./fonts/Acumin-Variable-Concept.ttf') format('truetype'); /* Replace with the actual path to your TTF font file */
+    /* font-weight: 100 900;
+    font-stretch: 75% 125%; */
+}
+
+* {
+    font-family: 'Acumin Variable Concept', sans-serif;
+}
+
+
+:root {
+    --primary-color: #cffffa;
+    --secondary-color: #2e8fe3;
+}
+
+body {
+    
+    background-color: var(--primary-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    /* flex-grow: 1; */
+    min-height: 55vh;
+}
+
+.navbar img {
+    max-width: 100px;
+    height: auto;
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--secondary-color); /* Change the color to your desired color */
+}
+
+.header-img {
+    width: 100%;
+    height: auto;
+}
+
+
+.main .content-about {
+    color: var(--secondary-color);
+    min-height: 55vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main .content-about h1 {
+    font-weight: 700;
+}
+
+.main .content-information {
+    color: var(--secondary-color);
+}
+
+.main .content-information h1 {
+    font-weight: 700;
+}
+
+.main .content-information h2 {
+    font-weight: 700;
+}
+
+.main .content-information .content-information-details .title {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main .content-information .content-information-details img {
+    max-width: 70vw;
+}
+
+.footer {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.footer img {
+    max-width: 200px;
+    height: auto;
+}
+
+
+@media screen and (max-width: 992px) {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 575px) {
+    .main .content-about h1 {
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 475px) {
+}
+
+@media screen and (max-width: 375px) {
+}
