@@ -25,7 +25,7 @@
         <div id="app">
 
             <!-- Navigation Bar -->
-            <nav class="navbar navbar-expand-sm py-4">
+            <nav class="navbar navbar-expand-sm py-4" :class="{'navbar-shadow': isNavbarShadow }">
                 <div class="container d-flex justify-content-between">
                   <!-- Brand/Logo -->
                   <router-link to="/" class="navbar-brand"><img src="./src/assets/ASSET-02.png" alt="spix-logo"></router-link>
@@ -87,7 +87,6 @@
         <script src="./src/pages/Information.vue.js"></script>
 
         <script>
-
             const routes = [
                 {
                     path: '/',
@@ -105,7 +104,25 @@
                 {history: VueRouter.createWebHashHistory(), routes}
             )
 
-            const app = Vue.createApp({})
+            const app = Vue.createApp({
+                data() {
+                    return {
+                        isNavbarShadow: false
+                    };
+                },
+                mounted() {
+                    window.addEventListener('scroll', this.handleScroll);
+                },
+                destroyed() {
+                    window.removeEventListener('scroll', this.handleScroll);
+                },
+                methods: {
+                    handleScroll() {
+                    // Add shadow when scrolled
+                        this.isNavbarShadow = window.scrollY > 50;
+                    }
+                }
+            })
             app.use(router)
             app.mount('#app')
         </script>
