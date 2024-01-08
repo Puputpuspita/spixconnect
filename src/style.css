@@ -9,7 +9,6 @@
     font-family: 'Acumin Variable Concept', sans-serif;
 }
 
-
 :root {
     --primary-color: #cffffa;
     --secondary-color: #2e8fe3;
@@ -23,10 +22,9 @@ body {
     flex-direction: column;
 }
 
-.main {
-    /* flex-grow: 1; */
-    min-height: 60vh;
-}
+/* .main {
+    min-height: 50vh;
+} */
 
 .navbar {
     position: fixed;
@@ -55,6 +53,7 @@ body {
     color: var(--secondary-color); /* Change the color to your desired color */
 }
 
+
 .header-img {
     width: 90%;
 }
@@ -62,6 +61,12 @@ body {
 .main {
     margin-top: 100px;
 }
+
+.main .content-home {
+    margin-top: 140px;
+    margin-bottom: 70px;
+}
+
 .main .content-about {
     color: var(--secondary-color);
     /* display: flex;
@@ -90,15 +95,18 @@ body {
 }
 
 .main .content-information h2 {
-    font-weight: 700;
+    font-size: 1.8em;
+    font-weight: 710;
+    line-height: 0.8;
 }
 
 .main .content-information .title {
-    min-height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .main .content-information .content-information-detail{
@@ -151,9 +159,21 @@ body {
 } */
 
 @media screen and (max-width: 992px) {
+    .main .content-information h2 {
+        font-size: 1.5em;
+        font-weight: 700;
+    }
 }
 
 @media screen and (max-width: 768px) {
+    .main .content-information h2 {
+        font-size: 1em;
+    }
+
+    .main .content-home {
+        margin-top: 160px;
+        margin-bottom: 100px;
+    }
 }
 
 @media screen and (max-width: 575px) {
@@ -162,6 +182,11 @@ body {
     }
     .main .content-about h1 {
         font-size: 2em;
+    }
+
+    .main .content-information .title {
+        margin-top: 60px;
+        margin-bottom: 60px;
     }
 
     .main .content-information h2 {
@@ -175,6 +200,8 @@ body {
     .main .content-information .content-information-detail{
         width: 90%;
     }
+
+
 }
 
 @media screen and (max-width: 475px) {

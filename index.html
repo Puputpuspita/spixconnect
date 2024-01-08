@@ -32,7 +32,7 @@
                   
                   <!-- Toggler/collapsible Button -->
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" @click="toggleNavbar">
                     <span class="navbar-toggler-icon"></span>
                   </button>
                   
@@ -107,7 +107,7 @@
             const app = Vue.createApp({
                 data() {
                     return {
-                        isNavbarShadow: false
+                        isNavbarShadow: false,
                     };
                 },
                 mounted() {
@@ -121,16 +121,30 @@
                     handleScroll() {
                     // Add shadow when scrolled
                         this.isNavbarShadow = window.scrollY > 50;
-                    }
+                    },
+                    toggleNavbar() {
+                        this.isNavbarOpen = !this.isNavbarOpen;
+                        this.isNavbarShadow = this.isNavbarOpen;
+                    },
                 }
             })
 
             router.beforeEach((to, from, next) => {
+                const navbar = document.querySelector('.navbar-collapse');
+                if (navbar) {
+                    const isNavbarOpen = navbar.classList.contains('show');
+                    if (isNavbarOpen) {
+                        const toggleButton = document.querySelector('.navbar-toggler');
+                        toggleButton.click(); // Close the navbar
+                    }
+                }
+
                 if (to.path !== from.path) {
                     if (window.scrollY > 0) {
                         window.scrollTo(0, 0);
                     }
                 }
+
                 next();
             });
 
