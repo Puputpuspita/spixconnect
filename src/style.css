@@ -15,7 +15,6 @@
 }
 
 body {
-    
     background-color: var(--primary-color);
     min-height: 100vh;
     display: flex;
@@ -201,6 +200,16 @@ body {
         width: 90%;
     }
 
+    .footer {
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
+    
+    .footer img {
+        min-width: 50px;
+        max-width: 100px;
+        height: auto;
+    }
 
 }
 

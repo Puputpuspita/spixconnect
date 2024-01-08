@@ -43,10 +43,10 @@
                         <router-link to="/" class="nav-link" :class="{ 'active': $route.path === '/' }">HOME</router-link>
                       </li>
                       <li class="nav-item">
-                        <router-link to="/about" class="nav-link" :class="{ 'active': $route.path === '/about' }">ABOUT US</router-link>
+                        <router-link to="/maps" class="nav-link" :class="{ 'active': $route.path === '/maps' }">MAPS</router-link>
                       </li>
                       <li class="nav-item">
-                        <router-link to="/information" class="nav-link" :class="{ 'active': $route.path === '/information' }">INFORMATION</router-link>
+                        <router-link to="/rundown" class="nav-link" :class="{ 'active': $route.path === '/rundown' }">RUNDOWN</router-link>
                       </li>
                     </ul>
                   </div>
@@ -56,6 +56,12 @@
             <div class="main"> 
                 <router-view></router-view>
             </div>
+
+            <!-- Menunya itu Home -> ada image home sama about us
+                Rundown -> masukkan 2 
+                sama Maps -> masukkan maps umkm, tenant festival, sama festival maps yang paling atas
+                Footer
+            -->
 
             <!-- Footer -->
             <footer class="footer py-5">
@@ -83,8 +89,8 @@
 
         <!-- Script vue js -->
         <script src="./src/pages/Home.vue.js"></script> 
-        <script src="./src/pages/AboutUs.vue.js"></script> 
-        <script src="./src/pages/Information.vue.js"></script>
+        <script src="./src/pages/Maps.vue.js"></script> 
+        <script src="./src/pages/Rundown.vue.js"></script>
 
         <script>
             const routes = [
@@ -92,11 +98,11 @@
                     path: '/',
                     component: Home
                 }, {
-                    path: '/about',
-                    component: About
+                    path: '/maps',
+                    component: Maps
                 }, {
-                    path: '/information',
-                    component: Information
+                    path: '/rundown',
+                    component: Rundown
                 }
             ]
 
