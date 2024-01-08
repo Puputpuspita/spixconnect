@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+        <link rel="icon" type="image/png" href="./src/assets/SPIX-LOGO.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Using Bootstrap from CDN -->
         <link
@@ -112,6 +112,7 @@
                 },
                 mounted() {
                     window.addEventListener('scroll', this.handleScroll);
+
                 },
                 destroyed() {
                     window.removeEventListener('scroll', this.handleScroll);
@@ -123,6 +124,16 @@
                     }
                 }
             })
+
+            router.beforeEach((to, from, next) => {
+                if (to.path !== from.path) {
+                    if (window.scrollY > 0) {
+                        window.scrollTo(0, 0);
+                    }
+                }
+                next();
+            });
+
             app.use(router)
             app.mount('#app')
         </script>
