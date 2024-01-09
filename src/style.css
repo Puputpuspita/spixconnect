@@ -57,6 +57,9 @@ body {
     color: var(--secondary-color);
     
     min-height: 60vh;
+
+    animation: fadeIn 0.3s ease-out;
+    animation-delay: 1s;
 }
 
 .main .content-about h1 {
@@ -74,18 +77,10 @@ body {
 }
 
 .main .content-information h2 {
-    font-weight: 800;
+    font-weight: 740;
     line-height: 0.8;
 }
 
-.main .content-information .title {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    margin-top: 100px;
-    margin-bottom: 100px;
-}
 
 .main .content-information .content-information-detail {
     max-width: 70%;
@@ -132,7 +127,7 @@ body {
 @keyframes fadeIn {
     0% {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(30px);
     }
     100% {
         opacity: 1;
@@ -141,10 +136,9 @@ body {
 }
 
 @media screen and (max-width: 992px) {
-    /* .main .content-information h2 {
-        font-size: 1.5em;
-        font-weight: 700;
-    } */
+    .main .content-information h2 {
+        font-weight: 800;
+    }
 }
 
 @media screen and (max-width: 768px) {
