@@ -16,14 +16,9 @@
 
 body {
     background-color: var(--primary-color);
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
-
-/* .main {
-    min-height: 50vh;
-} */
 
 .navbar {
     position: fixed;
@@ -68,7 +63,7 @@ body {
 .main .content-about {
     color: var(--secondary-color);
     
-    min-height: 70vh;
+    min-height: 50vh;
 }
 
 .main .content-about h1 {
