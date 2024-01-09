@@ -1,8 +1,6 @@
 @font-face {
     font-family: 'Acumin Variable Concept';
-    src: url('./fonts/Acumin-Variable-Concept.ttf') format('truetype'); /* Replace with the actual path to your TTF font file */
-    /* font-weight: 100 900;
-    font-stretch: 75% 125%; */
+    src: url('./fonts/Acumin-Variable-Concept.ttf') format('truetype');
 }
 
 * {
@@ -30,11 +28,6 @@ body {
 }
 
 .navbar-shadow{
-    /* position: fixed;
-    width: 100%;
-    transition: box-shadow 0.2s;
-    background-color: var(--primary-color);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -44,7 +37,7 @@ body {
 }
 
 .navbar-nav .nav-link.active {
-    color: var(--secondary-color); /* Change the color to your desired color */
+    color: var(--secondary-color);
 }
 
 
@@ -153,11 +146,6 @@ body {
         font-size: 1.5em;
         font-weight: 700;
     }
-
-    .main .content-about {    
-        min-height: 60vh;
-    }
-
 }
 
 @media screen and (max-width: 768px) {
