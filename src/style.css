@@ -142,16 +142,16 @@ body {
 }
 
 @media screen and (max-width: 992px) {
-    .main .content-information h2 {
+    /* .main .content-information h2 {
         font-size: 1.5em;
         font-weight: 700;
-    }
+    } */
 }
 
 @media screen and (max-width: 768px) {
-    .main .content-information h2 {
+    /* .main .content-information h2 {
         font-size: 1em;
-    }
+    } */
 
     .main .content-home {
         margin-top: 160px;
