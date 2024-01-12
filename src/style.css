@@ -200,12 +200,12 @@ body {
 
 @media screen and (max-width: 475px) {
     .main .content-information h3 {
-        font-size: 0.8em;
+        font-size: 1em;
     }
 }
 
 @media screen and (max-width: 375px) {
     .main .content-information h3 {
-        font-size: 0.7em;
+        font-size: 0.9em;
     }
 }
