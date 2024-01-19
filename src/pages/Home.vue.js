@@ -1,7 +1,7 @@
 const Home = {
   template: `
     <div class="content-home container d-flex align-items-center justify-content-center">
-        <img src="./src/assets/ASSET-03.png" class="img-fluid header-img mx-auto" alt="header-spix">
+        <img src="./src/assets/WEB-03.png" class="img-fluid header-img mx-auto" alt="header-spix">
     </div>
 
     <div class="content-about container py-5 d-flex flex-column justify-content-center align-items-center">

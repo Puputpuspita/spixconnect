@@ -6,12 +6,17 @@ const Maps = {
             <div div class="img-container">
               <h3>MAPS</h3>
               <h3 class="mb-3">UMKM, TECHNOLOGY, CONFERENCE</h3>
-              <img src="./src/assets/ASSET-04.png" class="img-fluid" alt="maps-conference">
+              <img src="./src/assets/WEB-04.png" class="img-fluid" alt="maps-conference">
+            </div>
+            <div class="img-container">
+                <h3>TENANTS</h3>
+                <h3 class="mb-3">INFORMATION</h3>
+                <img src="./src/assets/WEB-05.png" class="img-fluid maps-tenant" alt="maps-tenant">
             </div>
             <div div class="img-container">
               <h3>FESTIVAL</h3>
               <h3 class="mb-3">MAPS</h3>
-              <img src="./src/assets/ASSET-07.png" class="img-fluid" alt="maps-gate"
+              <img src="./src/assets/WEB-07.png" class="img-fluid" alt="maps-gate"
             </div>
             </div>
         </div>

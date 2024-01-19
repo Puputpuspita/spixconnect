@@ -58,18 +58,9 @@ body {
     width: 70%;
 }
 
-/* .main .content-about h1 {
-    font-weight: 800;
-    letter-spacing: 3px;
-} */
-
 .main .content-about h2 {
     font-weight: 800;
 }
-
-/* .main .content-about p {
-    font-size: 1.2em;
-} */
 
 .main .content-information {
     color: var(--secondary-color);
@@ -83,7 +74,6 @@ body {
 
 .main .content-information .content-information-detail {
     max-width: 70%;
-    /* text-align: center; */
     letter-spacing: 0.5px;
 }
 
@@ -151,7 +141,6 @@ body {
     .main .content-information .content-information-detail{
         max-width: 90%;
         width: 90%;
-        /* text-align: center; */
     }
 
     
